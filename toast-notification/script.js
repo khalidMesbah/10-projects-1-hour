@@ -1,19 +1,17 @@
-const btn = document.getElementById("btn");
-const container = document.getElementById("container");
+const btn = document.getElementById(`btn`);
+const notificationsContainer = document.getElementById(`notifications-container`);
+let numberOfNotifications = notificationsContainer.children.length;
 
-btn.addEventListener("click", () => {
-    createNotification();
-});
+const addNewNotification = () => {
+    const notification = document.createElement(`div`);
+    notification.classList.add(`notification`);
+    const text = document.createTextNode(`new notification${++numberOfNotifications}!`);
+    notification.appendChild(text);
+    notificationsContainer.prepend(notification);
+};
 
-function createNotification() {
-    const notif = document.createElement("div");
-    notif.classList.add("toast");
+setInterval(() => {
+    if (notificationsContainer.children.length !== 0) notificationsContainer.lastElementChild.remove(), --numberOfNotifications;
+}, 1500);
 
-    notif.innerText = "This challenge is crazy!";
-
-    container.appendChild(notif);
-
-    setTimeout(() => {
-        notif.remove();
-    }, 3000);
-}
+btn.addEventListener(`click`, addNewNotification);
