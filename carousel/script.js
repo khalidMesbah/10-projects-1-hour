@@ -1,17 +1,10 @@
-const imgs = document.getElementById("imgs");
+const imgContainer = document.getElementById(`imgs-container`);
+const images = document.querySelectorAll(`img`);
 
-const img = document.querySelectorAll("#imgs img");
+images.forEach((img, index) => img.style.left = `${index * 100}%`);
 
-let idx = 0;
-
-function run() {
-    idx++;
-
-    if (idx > img.length - 1) {
-        idx = 0;
-    }
-
-    imgs.style.transform = `translateX(${-idx * 500}px)`;
-}
-
-setInterval(run, 2000);
+let counter = 0;
+setInterval(() => {
+    if (counter === images.length) counter = 0;
+    imgContainer.style.transform = `translateX(-${counter++ * 100}%)`;
+}, 1000);

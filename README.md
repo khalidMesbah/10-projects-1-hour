@@ -59,7 +59,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   toggle
 -   toggle event
 
-8. [ ] Carousel
+8. [x] Carousel
 
 -   3/4 images
 -   carousel container
