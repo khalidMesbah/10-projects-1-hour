@@ -1,17 +1,10 @@
-const container = document.getElementById("container");
-const img = document.querySelector("img");
-
-container.addEventListener("mousemove", (e) => {
-    const x = e.clientX - e.target.offsetLeft;
-    const y = e.clientY - e.target.offsetTop;
-
-    console.log(x, y);
-
-    img.style.transformOrigin = `${x}px ${y}px`;
-    img.style.transform = "scale(2)";
+const img = document.getElementById(`img`);
+const imgContainer = document.getElementById(`img-container`);
+img.addEventListener(`mousemove`, (e) => {
+    img.style.transformOrigin = `${e.offsetX}px ${e.offsetY}px`;
+    img.src = `https://images.unsplash.com/photo-1582769923195-c6e60dc1d8dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80`;
+    img.classList.add(`active`);
 });
-
-container.addEventListener("mouseleave", () => {
-    img.style.transformOrigin = "center center";
-    img.style.transform = "scale(1)";
+img.addEventListener(`mouseleave`, () => {
+    img.classList.remove(`active`);
 });

@@ -76,7 +76,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   create buttons w/ text
 -   play sound on click
 
-10. [ ] Zoom effect
+10. [x] Zoom effect
 
 -   image
 -   track mouse movement
@@ -86,11 +86,8 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 
 1. [ ] Date - show date
 2. [ ] Image of the day - image library needed
-
--   https://picsum.photos/200/300
-
 3. [ ] Something with API
-4. [ ] Random Number from 1 to 6
+4. [x] Random Number from 1 to 6
 5. [ ] Scroll to top
 6. [ ] Fixed nav on scroll
 7. [ ] Loader
