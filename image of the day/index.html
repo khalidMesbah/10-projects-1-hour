@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Of The Day</title>
+    <style>
+        body {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const div = document.createElement("div");
+        const img = document.createElement("img");
+        const body = document.querySelector("body");
+        const max = Math.floor(Math.random() * 1000) + 100;
+        const min = Math.floor(Math.random() * 100) + 100;
+        const RandomNumber = Math.floor(Math.random() * (max - min) + min);
+
+        img.src = "https://picsum.photos/" + RandomNumber;
+        div.appendChild(img);
+        body.appendChild(div);
+    </script>
+</body>
+
+</html>

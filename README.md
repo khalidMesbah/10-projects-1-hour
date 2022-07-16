@@ -6,7 +6,7 @@ YouTube video is now Live, click below:
 
 I took on a challenge to completed 10 Projects in 1 Hour while streaming everything on [Twitch](https://twitch.tv/florinpop17).
 
-You can find the projects [here](https://10projects1hour.netlify.app/).
+You can find the projects [here](https://khalidmesbah.github.io/10-projects-1-hour/).
 
 1. [x] Hamburger Button
 
@@ -85,12 +85,12 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 ## Other ideas
 
 1. [ ] Date - show date
-2. [ ] Image of the day - image library needed
+2. [x] Image of the day - image library needed
 3. [ ] Something with API
 4. [x] Random Number from 1 to 6
 5. [ ] Scroll to top
 6. [ ] Fixed nav on scroll
-7. [ ] Loader
+7. [x] Loader
 8. [ ] Converter
 9. [ ] Random Password Generator
 10. [ ] / \ random stuff

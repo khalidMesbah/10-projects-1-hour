@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random number</title>
+    <style>
+        body {
+            background: #f1f1f1;
+            color: #333;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>a random number between <span id="min"></span> and <span id="max"></span></h1>
+    </div>
+    <h1 id="display"></h1>
+    <script>
+        const display = document.getElementById(`display`);
+        const max = Math.floor(Math.random() * 1000);
+        document.getElementById(`max`).textContent = max;
+        const min = Math.floor(Math.random() * 100);
+        document.getElementById(`min`).textContent = min;
+        setInterval(() => {
+            const RandomNumber = Math.random() * (max - min) + min;
+            display.textContent = Math.floor(RandomNumber);
+        }, 500)
+    </script>
+
+</body>
+
+
+</html>

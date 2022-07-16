@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+        }
+
+        div {
+            position: absolute;
+            border-radius: 50%;
+            border: 10px solid #000;
+            clip-path: inset(0 0 50% 0);
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        h1 {
+            position: fixed;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>other loaders i have did lives <a href="https://codepen.io/KhalidMesbah/pen/vYZBaao">here</a></h1>
+    <script>
+        const body = document.querySelector("body");
+        let n = 400;
+        for (let i = n; i > 0; i -= 25) {
+            body.insertAdjacentHTML("beforeend", `<div></div>`);
+        }
+        const divs = document.querySelectorAll("div");
+        let r = n;
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].style.width = `${r}px`;
+            divs[i].style.height = `${r}px`;
+            divs[i].style.animation = `rotate ${n / (r - i)}s linear infinite`;
+            divs[i].style.background = `rgb(${Math.floor(
+                Math.random() * 255
+            )},${Math.floor(Math.random() * 255)},${Math.floor(
+                Math.random() * 255
+            )})`;
+            divs[i].style.borderColor = `rgb(${Math.floor(
+                Math.random() * 255
+            )},${Math.floor(Math.random() * 255)},${Math.floor(
+                Math.random() * 255
+            )})`;
+            r -= 25;
+        }
+    </script>
+</body>
+
+</html>
