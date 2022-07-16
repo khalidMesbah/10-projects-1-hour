@@ -52,7 +52,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   generate color
 -   change bg color on click
 
-7. [ ] Dark mode toggle
+7. [x] Dark mode toggle
 
 -   text
 -   css for dark mode
