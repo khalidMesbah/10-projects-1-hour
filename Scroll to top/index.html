@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll To Top</title>
+    <style>
+        body {
+            height: 5000px;
+        }
+
+        button {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            background: #4a4;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            padding: 0.25em 0.5em;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            transition: 0.5s;
+            cursor: pointer;
+            display: none;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>scroll down</h1>
+    <button id="button">up</button>
+    <script>
+        let btn = document.querySelector("button");
+        window.onscroll = () => {
+            if (window.scrollY >= 700) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        btn.onclick = function () {
+            window.scrollTo({
+                left: 0,
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+</body>
+
+</html>
