@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: rgb(0 145 147);
+  display: grid;
+  place-content: center;
+  color: #313131;
+  font-family: "Quicksand", sans-serif;
+}
+
+form {
+  width: 400px;
+  background: rgb(0, 208, 255);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+fieldset {
+  width: 100%;
+  padding: 10px;
+}
+
+legend {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none;
+  text-transform: capitalize;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+form h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.result-container {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  word-break: break-all;
+  padding-right: 40px;
+  position: relative;
+  border: 1px solid red;
+}
+
+#result {
+  padding: 10px;
+  width: 100%;
+  text-overflow: ellipsis;
+  height: 100%;
+}
+
+.result-container svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.result-container svg:hover {
+  transform: scale(0.95);
+}
+
+.tooltip {
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: green;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: green transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+input[type="number"] {
+  width: 45px;
+  height: 20px;
+}
+
+input:not(input[type="number"]) {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+/* the button */
+button {
+  background-color: #ff4757;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: no;
+  user-select: no;
+  overflow: hidden;
+  border-radius: 10px;
+  border-style: none;
+  border: 1px solid #ff6b81;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button span {
+  position: relative;
+  z-index: 1;
+  padding: 1em 2em;
+  display: block;
+  font-size: 1.3em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button span::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #ff6b81;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 500ms linear;
+  border-radius: 50%;
+}
+button:hover span::before {
+  transform: scale(1);
+  transition: all 400ms linear;
+}
+button:active {
+  box-shadow: 0 0 4px 2px #ff47566e;
+  transform: scale(0.9);
+}

@@ -92,5 +92,5 @@ You can find the projects [here](https://khalidmesbah.github.io/10-projects-1-ho
 6. [x] Fixed nav on scroll
 7. [x] Loader
 8. [ ] Converter
-9. [ ] Random Password Generator
+9. [x] Random Password Generator
 10. [x] / \ random stuff => check out my [codepen](https://codepen.io/KhalidMesbah) : i have hundreds there
