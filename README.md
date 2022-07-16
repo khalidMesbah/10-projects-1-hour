@@ -15,14 +15,14 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   toggle on click
 -   animation
 
-2. [ ] Toast Notification
+2. [x] Toast Notification
 
 -   toast container floating
 -   toast design
 -   button
 -   click show random toast message
 
-3. [ ] Auto Write Text
+3. [x] Auto Write Text
 
 -   text
 -   index

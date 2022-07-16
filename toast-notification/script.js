@@ -5,7 +5,7 @@ let numberOfNotifications = notificationsContainer.children.length;
 const addNewNotification = () => {
     const notification = document.createElement(`div`);
     notification.classList.add(`notification`);
-    const text = document.createTextNode(`new notification${++numberOfNotifications}!`);
+    const text = document.createTextNode(`new notification ${++numberOfNotifications}!`);
     notification.appendChild(text);
     notificationsContainer.prepend(notification);
 };
