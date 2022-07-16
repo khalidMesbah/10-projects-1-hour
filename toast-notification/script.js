@@ -7,11 +7,12 @@ const addNewNotification = () => {
     notification.classList.add(`notification`);
     const text = document.createTextNode(`new notification ${++numberOfNotifications}!`);
     notification.appendChild(text);
-    notificationsContainer.prepend(notification);
+    notificationsContainer.appendChild(notification);
 };
 
 setInterval(() => {
-    if (notificationsContainer.children.length !== 0) notificationsContainer.lastElementChild.remove(), --numberOfNotifications;
+    if (notificationsContainer.children.length !== 0) notificationsContainer.firstElementChild.remove();
+    if (notificationsContainer.children.length === 0) numberOfNotifications = 0;
 }, 1500);
 
 btn.addEventListener(`click`, addNewNotification);
