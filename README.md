@@ -68,7 +68,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   index
 -   automatic switch index and update container transform property
 
-9. [ ] Sound Board
+9. [x] Sound Board
 
 -   sounds (HAVE THESE READY SIR)
 -   array with names
