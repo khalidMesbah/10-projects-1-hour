@@ -37,7 +37,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   popup with text
 -   close btn popup with click event
 
-5. [ ] Purple Heart Rain
+5. [x] Purple Heart Rain
 
 -   heart css
 -   falling animation

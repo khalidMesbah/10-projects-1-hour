@@ -1,11 +1,13 @@
+const hearts = [`💜`, `💚`, `💙`, `💛`, `💝`];
+
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
 
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    heart.style.animationDuration = Math.random() * 3 + 2 + "s";
 
-    heart.innerText = "💜";
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
 
     document.body.appendChild(heart);
 
@@ -14,4 +16,4 @@ function createHeart() {
     }, 5000);
 }
 
-setInterval(createHeart, 300);
+setInterval(createHeart, 200);
