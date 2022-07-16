@@ -46,7 +46,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   add it to body
 -   interval
 
-6. [ ] Background Changer
+6. [x] Background Changer
 
 -   button w/ click
 -   generate color
