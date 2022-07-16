@@ -1,11 +1,4 @@
-const open = document.getElementById("open");
-const close = document.getElementById("close");
-const container = document.getElementById("container");
+const popUpContainer = document.getElementById("container");
+const btns = document.querySelectorAll(`.toggleModal`);
 
-open.addEventListener("click", () => {
-    container.classList.add("active");
-});
-
-close.addEventListener("click", () => {
-    container.classList.remove("active");
-});
+btns.forEach(btn => btn.onclick = () => popUpContainer.classList.toggle("active"));

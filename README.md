@@ -29,7 +29,7 @@ You can find the projects [here](https://10projects1hour.netlify.app/).
 -   show text based on index
 -   increment index
 
-4. [ ] Popup / Modal
+4. [x] Popup / Modal
 
 -   button
 -   click on button to activate popup
