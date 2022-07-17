@@ -39,6 +39,10 @@ footer {
   width: 100%;
 }
 
+footer a{
+  text-decoration: underline;
+}
+
 a,
 a:active,
 a:focus {
