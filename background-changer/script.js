@@ -9,7 +9,6 @@ btn.addEventListener("click", () => {
 });
 
 hypnosisBtn.addEventListener("click", () => {
-    console.log(toggle);
     if (toggle) {
         interval = setInterval(changeBackgroundColor, 50);
         toggle = 0;

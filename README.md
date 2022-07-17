@@ -1,10 +1,10 @@
 ## Coding Challenge - 10 JavaScript Projects in 1 Hour
 
+I have coded the 10 projects inspired by florin pop challenge and an additional 8 projects of my own.
+
 YouTube video is now Live, click below:
 
 [![1Hour10Projects](1Hour10Projects.png)](https://www.youtube.com/watch?v=8GPPJpiLqHk)
-
-I took on a challenge to completed 10 Projects in 1 Hour while streaming everything on [Twitch](https://twitch.tv/florinpop17).
 
 You can find the projects [here](https://khalidmesbah.github.io/10-projects-1-hour/).
 
