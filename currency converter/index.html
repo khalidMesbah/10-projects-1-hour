@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="favicon/cash-coins-currency.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -16,45 +17,30 @@
         <form action="#">
             <label>
                 <p>enter amount</p>
-                <input title="amount" type="number" name="amount" id="amount">
+                <input title="amount" type="number" name="amount" id="amount" value="1">
             </label>
             <div class="from-to-container">
                 <div class="from">
                     <p>from</p>
                     <div class="select-box">
-                        <img src="https://flagcdn.com/48x36/np.png" alt="flag">
-                        <select name="from" title="from" id="from">
-                            <option value="">Lorem1</option>
-                            <option value="">Lorem2</option>
-                            <option value="">Lorem3</option>
-                            <option value="">Lorem4</option>
-                            <option value="">Lorem5</option>
-                            <option value="">Lorem6</option>
-                        </select>
+                        <img src="https://flagcdn.com/48x36/us.png" alt="flag">
+                        <select name="from" title="from" id="from"></select>
                     </div>
                 </div>
-                <div class="convert">
+                <div class="convert" id="switch-btn">
                     <img src="currency-exchange-50.png" alt="currency exchange">
                 </div>
                 <div class="to">
                     <p>to</p>
-                    <img src="https://flagcdn.com/48x36/np.png" alt="flag">
-                    <select name="to" title="to" id="to">
-                        <option value="">Lorem1</option>
-                        <option value="">Lorem2</option>
-                        <option value="">Lorem3</option>
-                        <option value="">Lorem4</option>
-                        <option value="">Lorem5</option>
-                        <option value="">Lorem6</option>
-                    </select>
+                    <div class="select-box">
+                        <img src="https://flagcdn.com/48x36/eg.png" alt="flag">
+                        <select name="to" title="to" id="to"></select>
+                    </div>
                 </div>
             </div>
-    </div>
-    <div id="result">
-        <span>321</span>bmw = <span>123</span>rnd
-    </div>
-    <button type="button" class="btn btn-4">get exchange rate</button>
-    </form>
+            <div id="result">1 USD = 18.906203 EGP</div>
+            <button type="button" class="btn btn-4" id="btn">get exchange rate</button>
+        </form>
     </div>
 </body>
 

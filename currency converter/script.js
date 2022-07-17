@@ -1,4 +1,4 @@
-let country_list = {
+let countryList = {
     "AED": "AE",
     "AFN": "AF",
     "XCD": "AG",
@@ -159,3 +159,74 @@ let country_list = {
     "ZMK": "ZM",
     "ZWD": "ZW"
 };
+const selectEls = document.querySelectorAll(`select`);
+const getExchangeRateBtn = document.getElementById(`btn`);
+const fromCurrency = document.getElementById(`from`);
+const toCurrency = document.getElementById(`to`);
+const resultEl = document.getElementById(`result`);
+const switchCurrenciesBtn = document.getElementById(`switch-btn`);
+/* load initial options */
+(() => {
+    selectEls.forEach((selectEl, index) => {
+        let options = ``;
+        for (let currency in countryList) {
+            /* make usd selected by default in the first select*/
+            let selected;
+            if (index === 0) selected = currency === 'USD' ? "selected" : "";
+            if (index === 1) selected = currency === 'EGP' ? "selected" : "";
+
+            options += `<option value="${currency}" ${selected}>${currency}</option>`;
+        }
+        selectEl.innerHTML = options;
+        selectEl.addEventListener(`change`, () => getFlag(selectEl));
+    });
+})();
+
+/* functions */
+const switchCurrencies = () => {
+    let temp = fromCurrency.value;
+    fromCurrency.value = toCurrency.value;
+    toCurrency.value = temp
+    selectEls.forEach(selectEl=>getFlag(selectEl))
+    getExchangeRate()
+};
+const fetchRate = (amountValue) => {
+    var myHeaders = new Headers();
+    myHeaders.append("apikey", "5tcwa6UfJuiH3WJANZHYZBtTsi2vB530");
+
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow',
+        headers: myHeaders
+    };
+    fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${toCurrency.value}&from=${fromCurrency.value}&amount=${amountValue}`, requestOptions)
+        .then(res => res.json())
+        .then(res => {
+            const { result, query: { from, to, amount } } = res;
+            resultEl.textContent = `${amount} ${from} = ${result} ${to}`;
+        })
+        .catch(error => {
+            console.log('error', error);
+            resultEl.textContent = `Ooops, something went wrong`
+        });
+};
+const getExchangeRate = () => {
+    resultEl.textContent = `Waiting...`;
+    const amount = document.getElementById(`amount`);
+    let amountValue = amount.value;
+    if (amountValue === "" || amountValue === "0") {
+        amount.value = '1';
+        amountValue = '1';
+    }
+    fetchRate(amountValue);
+};
+const getFlag = (selectEl) => {
+    const img = selectEl.parentElement.querySelector(`img`);
+    img.src = `https://flagcdn.com/48x36/${countryList[selectEl.value].toLowerCase()}.png`;
+};
+/* event listeners */
+getExchangeRateBtn.addEventListener(`click`, (e) => {
+    e.preventDefault();
+    getExchangeRate();
+});
+switchCurrenciesBtn.addEventListener(`click`,switchCurrencies)

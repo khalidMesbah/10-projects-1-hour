@@ -84,13 +84,13 @@ You can find the projects [here](https://khalidmesbah.github.io/10-projects-1-ho
 
 ## Other ideas
 
-1. [ ] Date - show date
+1. [x] Date - show date
 2. [x] Image of the day - image library needed
-3. [ ] Something with API
+3. [x] Something with API
 4. [x] Random Number from 1 to 6
 5. [x] Scroll to top
 6. [x] Fixed nav on scroll
 7. [x] Loader
-8. [ ] Converter
+8. [x] Converter
 9. [x] Random Password Generator
 10. [x] / \ random stuff => check out my [codepen](https://codepen.io/KhalidMesbah) : i have hundreds there

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        body {
+            background: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            text-transform: capitalize;
+            overflow: hidden;
+        }
+
+        *>* {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #time {
+            padding: 10px;
+            color: gold;
+            font-size: 100px;
+        }
+    </style>
+    <script defer>
+        const months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ];
+        const weekdays = [
+            'Sunday',
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+        ];
+        function printTime() {
+            const date = new Date(),
+                year = date.getUTCFullYear(),
+                month = date.getMonth(),
+                day = date.getDay(),
+                hours = date.getHours(),
+                mins = date.getMinutes(),
+                secs = date.getSeconds(),
+                milli = date.getMilliseconds();
+            document.getElementById("time").innerHTML =
+                hours + ":" + mins + ":" + secs + ":" + milli;
+            document.getElementById("date").innerHTML =
+                `year:${year}, month:${months[month]}, day:${weekdays[day]}`;
+        }
+        setInterval(printTime, 1);
+    </script>
+</head>
+
+<body>
+    <h1 id="date"></h1>
+    <h2 id="time"></h2>
+</body>
+
+</html>
