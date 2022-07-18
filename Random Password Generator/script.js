@@ -43,7 +43,7 @@ const generateThePassword = (myFuncs, length) => {
 /* load initial options */
 (() => {
     try {
-        if (localStorage.length > 0) {
+        if (localStorage[`options`].length > 0) {
             options = JSON.parse(localStorage.getItem(`options`));
             lengthEl.value = options.length;
             upperEl.checked = options.includesUpper === true;
